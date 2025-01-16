@@ -1,4 +1,5 @@
 data/
+virtualargofleet/__pycache__/
 .ipynb_checkpoints/
 *.pbs.o*
 *.nc
