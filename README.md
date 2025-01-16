@@ -1,4 +1,4 @@
-This is my attempt to make Virtual Fleet works with crocro and the latest version parcels
+This is my attempt to make Virtual Fleet works with crocro and the latest version parcels  
 Example of simulation : 
 ```
 <VirtualFleet>
