@@ -1,0 +1,5 @@
+data/
+.ipynb_checkpoints/
+*.pbs.o*
+*.nc
+*.npy

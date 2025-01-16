@@ -1,0 +1,13 @@
+#!/bin/bash
+#PBS -q omp
+#PBS -l walltime=10:00:00
+#PBS -l mem=600g
+#PBS -l ncpus=1
+
+source /usr/share/Modules/3.2.10/init/bash
+source /appli/anaconda/latest/etc/profile.d/conda.sh
+
+conda activate /home1/datahome/kbalem/conda-env/virtualfleet-v3
+cd /home1/datahome/kbalem/VirtualCrocoFleet
+
+python vf_croco_sim.py
