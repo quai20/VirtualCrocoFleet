@@ -1,13 +1,13 @@
 #!/bin/bash
 #PBS -q omp
-#PBS -l walltime=10:00:00
-#PBS -l mem=600g
-#PBS -l ncpus=1
+#PBS -l walltime=4:00:00
+#PBS -l mem=100g
+#PBS -l ncpus=16
 
 source /usr/share/Modules/3.2.10/init/bash
 source /appli/anaconda/latest/etc/profile.d/conda.sh
 
-conda activate /home1/datahome/kbalem/conda-env/virtualfleet-v3
-cd /home1/datahome/kbalem/VirtualCrocoFleet
+conda activate /home1/datahome/kbalem/conda-env/xarray2024K
+cd /home1/datahome/kbalem/VirtualCrocoFleet/misc
 
 python vf_croco_sim.py

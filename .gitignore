@@ -4,3 +4,4 @@ virtualargofleet/__pycache__/
 *.pbs.o*
 *.nc
 *.npy
+data/
