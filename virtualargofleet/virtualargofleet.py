@@ -17,7 +17,7 @@ from .app_parcels import (
     ArgoParticle,    
     ArgoFloatKernel,    
     PeriodicBoundaryConditionKernel,
-    KeepInDomain, KeepInWater #, KeepInColumn,
+    KeepInDomain, KeepInWater, DeleteErrorParticle
 )
 from .velocity_helpers import VelocityField
 from .utilities import SimulationSet, FloatConfiguration
@@ -181,6 +181,7 @@ class VirtualFleet:
         K += self._parcels['ParticleSet'].Kernel(KeepInWater)
         #K += self._parcels['ParticleSet'].Kernel(KeepInColumn)
         K += self._parcels['ParticleSet'].Kernel(KeepInDomain)
+        K += self._parcels['ParticleSet'].Kernel(DeleteErrorParticle)
 
         self._parcels['kernels'] = K
         return self
@@ -340,7 +341,7 @@ class VirtualFleet:
         opts = {'runtime': duration,
                 'dt': step,
                 'verbose_progress': verbose_progress,
-                'output_file': None,
+                'output_file': None
                 }
 
         if output:

@@ -269,7 +269,12 @@ def KeepInWater(particle, fieldset, time):
         particle.depth = fieldset.vf_surface
         particle_ddepth = 0  # Reset change in depth
         particle.state = StatusCode.Success
-
+        
+def DeleteErrorParticle(particle, fieldset, time):
+    if particle.state == StatusCode.ErrorOutOfBounds:
+        if fieldset.verbose_events == 1:
+            print("OutOfBounds error : float deleted")
+        particle.delete()
 
 #def KeepInColumn(particle, fieldset, time):
 #    if particle.state == StatusCode.ErrorOutOfBounds:
